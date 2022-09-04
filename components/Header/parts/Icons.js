@@ -11,7 +11,7 @@ const Icons = () => {
   return (
     <div className="flex md:gap-1 text-3xl items-center relative z-50">
       <div className="hidden md:block mr-8 relative">
-        <TbSearch className="text-brand" />
+        <TbSearch className="text-green-600" />
         <div className="absolute w-[400px] -right-3 -top-1.5 -z-10">
           <input type="text" className="w-full py-1 shadow" />
         </div>

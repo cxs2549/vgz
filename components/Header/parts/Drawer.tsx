@@ -69,33 +69,64 @@ export default function TemporaryDrawer() {
   )
 
   return (
-    <div className="md:hidden -translate-y-1.5 translate-x-2">
+    <div className="relative ">
       <React.Fragment>
         <Button
           onClick={toggleDrawer("right", true)}
-          className="overflow-hidden z-50 relative"
+          className="overflow-hidden z-50 relative md:hidden -translate-y-1.5 translate-x-2"
         >
-          <HamburgerIcon
-            open={state}
-            onClick={() => setState(!state)}
-          />
+          <HamburgerIcon open={state} onClick={() => setState(!state)} />
         </Button>
         <Drawer
           anchor={"right"}
           open={state}
           onClose={toggleDrawer("right", false)}
         >
-          <div className="w-[300px] bg-slate-700 h-screen relative">
-            <Button
-              onClick={toggleDrawer("right", true)}
-              className="overflow-hidden z-50 absolute right-5 top-8"
-            >
-              <HamburgerIcon
-                className=""
-                open={state}
-                onClick={() => setState(!state)}
-              />
-            </Button>
+          <div className="w-[260px] sm:w-[280px]">
+            <Box role="presentation" className="dark:bg-slate-700 h-screen">
+              <div className="h-12 flex items-center justify-end px-5 bg-green-500 translate-y-4">
+                <Button
+                  onClick={toggleDrawer("right", true)}
+                  className="overflow-hidden z-50 relative md:hidden  translate-x-2"
+                >
+                  <HamburgerIcon
+                    open={state}
+                    onClick={() => setState(!state)}
+                  />
+                </Button>
+              </div>
+              <List className="mt-4">
+                {[
+                  "Home",
+                  "Search",
+                  "Discounts & Promos",
+                  "Feedback",
+                  "University Lessons",
+                ].map((text, index) => (
+                  <ListItem key={text} disablePadding>
+                    <ListItemButton>
+                      <ListItemText
+                        className="dark:text-white"
+                        primary={text}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                ))}
+              </List>
+              <Divider />
+              <List>
+                {["Settings", "Sign out"].map((text, index) => (
+                  <ListItem key={text} disablePadding>
+                    <ListItemButton>
+                      <ListItemText
+                        className="dark:text-white"
+                        primary={text}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
           </div>
         </Drawer>
       </React.Fragment>

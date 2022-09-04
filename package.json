@@ -20,6 +20,7 @@
     "react-dom": "18.1.0",
     "react-hamburger-icon": "^1.0.2",
     "react-icons": "^4.4.0",
+    "react-responsive-carousel": "^3.2.23",
     "sass": "^1.54.8",
     "styled-components": "^5.3.5",
     "tailwind-styled-components": "^2.1.8"
