@@ -14,7 +14,7 @@ const Container = ({ children, classes }) => {
       exit="exit"
       variants={variants}
       transition={{ type: "linear" }}
-      className={`max-w-7xl mx-auto p-5 xl:px-0 ${classes}`}
+      className={`max-w-6xl mx-auto p-5 xl:px-0 ${classes}`}
     >
       {children}
     </motion.div>

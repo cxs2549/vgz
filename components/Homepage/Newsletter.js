@@ -1,10 +1,10 @@
 const Newsletter = () => {
   return (
-    <div className="pb-8 pt-3 -translate-y-8 md:translate-y-0 flex flex-col items-center justify-center w-full">
-      <p id="keep" className="text-4xl lg:text-5xl font-bold text-center xl:w-[490px] max-w-md md:ml-auto text-brand dark:text-white opacity-80 dark:opacity-100 w-full md:text-right">
+    <div className="pb-8 pt-3   flex flex-col items-center justify-center w-full">
+      <p id="keep" className="text-3xl lg:text-5xl font-bold text-left xl:w-[490px] md:max-w-md md:ml-auto text-brand dark:text-white opacity-80 dark:opacity-100 w-full md:text-right xl:max-w-xl max-w-sm mx-auto xl:mx-0 xl:ml-auto">
         Keep up with the latest in <span className="italic font-extrabold">heavy</span> vaping technologies.
       </p>
-      <div className="mt-10 w-full max-w-lg lg:max-w-md md:ml-auto">
+      <div className="mt-10 w-full max-w-sm mx-auto lg:max-w-md md:ml-auto xl:mr-0">
         <div className="relative w-full ml-auto flex justify-end">
         <h2 className="absolute left-0 -top-4 translate-x-1 opacity-80">
           Sign up for our newsletter today.
