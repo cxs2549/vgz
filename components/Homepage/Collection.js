@@ -1,13 +1,13 @@
 const Collection = ({ title, collections }) => {
   return (
-    <div className="bg-slate-200 dark:bg-slate-700 rounded-xl p-2 pb-12 pt-5 shadow bg-blend-lighten opacity-95">
-      <h2 className="text-3xl font-bold w-full mb-4 pl-3 opacity-95">
+    <div className="bg-slate-200 dark:bg-slate-700 rounded-xl p-5 pb-12 pt-5 shadow bg-blend-lighten opacity-95">
+      <h2 className="text-3xl font-bold w-full mb-4 opacity-95">
         {title}
       </h2>
-      <div className="flex flex-col gap-1 w-full  ">
-        <div className="gap-2 flex flex-col">
+      <div className="flex flex-col  w-full  ">
+        <div className="gap-8 flex flex-col">
           {collections.map((collection) => (
-            <div className="p-2">
+            <div className="">
               <div className="flex items-center justify-between">
                 <h4 className="text-lg xl:text-xl opacity-90 font-medium mb-1 ml-1">
                   {collection.title} 

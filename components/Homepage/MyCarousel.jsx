@@ -11,11 +11,11 @@ const MyCarousel = ({ products }) => {
         showStatus={false}
         showThumbs={false}
         showArrows={false}
-        className="max-w-sm md:max-w-md relative"
+        className="max-w-sm md:max-w-md flex gap-1 relative"
       >
         {products.map((item, i) => (
           <Link href={`/products/${item.permalink}`}>
-            <div key={i} className="bg-white rounded-xl overflow-hidden">
+            <div key={i} className="bg-white rounded-xl overflow-hidden ml-1 mr-1">
               <img
                 src={item.image.url}
                 className="rounded-xl cursor-pointer"

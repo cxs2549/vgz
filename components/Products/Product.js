@@ -26,11 +26,10 @@ export default function Product({
       </Link>
       <div class="h-[308px] gap-8 px-5 py-12 rounded-lg flex flex-col relative  justify-between ">
         <div className="flex flex-col">
-          <div className="flex gap-2">
-            <h5 class="text- font-bold tracking-tight text-gray-900 dark:text-white">
+          <div className="flex gap-2 w-full">
+            <h5 class="w-full font-medium tracking-tight text-gray-900 dark:text-white">
               {name}
             </h5>
-            <Ratings reviews={created.toString().slice(-2)} />
           </div>
         </div>
         <p className="font-bold">{price.formatted_with_symbol}</p>
@@ -44,7 +43,7 @@ export default function Product({
             </Link>
             <button
               onClick={addToCart}
-              class="items-center py-2 px-3 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-32 flex justify-center"
+              class="items-center py-2 px-3 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-green-500 dark:focus:ring-green-800 w-32 flex justify-center"
             >
               Add to Cart
               <svg

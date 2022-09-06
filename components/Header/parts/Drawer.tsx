@@ -52,6 +52,7 @@ export default function TemporaryDrawer() {
           <HamburgerIcon open={state} onClick={() => setState(!state)} />
         </Button>
         <Drawer
+        id="drawer"
           anchor={"right"}
           open={state}
           onClose={toggleDrawer("right", false)}

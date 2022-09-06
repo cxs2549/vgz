@@ -47,9 +47,9 @@ export default function ProductPage({ product }) {
       <div className=" flex flex-col justify-between w-full">
         <div className="gap-8 flex flex-col w-full pr-2 ">
           <div className="flex flex-col lg:flex-row justify-between gap-4 items-start lg:items-center -z-10">
-            <h3 className="text-2xl font-medium dark:text-white">
+            <h5 className="text-2xl font-medium dark:text-white">
               {product.name}
-            </h3>
+            </h5>
             <div className="flex-shrink-0 self-start">
               <Ratings reviews={product.created.toString().slice(-2)} />
             </div>
