@@ -12,8 +12,8 @@ const Icons = () => {
     <div className="flex md:gap-1 text-3xl items-center relative z-50">
       <div className="hidden md:block mr-8 relative">
         <TbSearch className="text-green-600" />
-        <div className="absolute w-[400px] -right-3 -top-1.5 -z-10">
-          <input type="text" className="w-full py-1 shadow" />
+        <div className="absolute w-[400px] -right-3 -top-2 -z-10">
+          <input type="text" className="w-full shadow !outline-none text-slate-500 px-4 py-3 text-base" />
         </div>
       </div>
       <Link href="/cart">
@@ -51,7 +51,7 @@ const ProfileDropdown = () => {
           <div>
             <Menu.Button className="bg-green-500  grid place-items-center text-brand rounded-full shadow  text-sm   h-8 w-8 focus:ring-opacity-100">
               <span className="sr-only">Open user menu</span>
-              <h2 className="">CS</h2>
+              <h2 className="text-white">CS</h2>
             </Menu.Button>
           </div>
           <Transition
@@ -63,7 +63,7 @@ const ProfileDropdown = () => {
           >
             <Menu.Items
               static
-              className="origin-top-right  absolute -right-2 mt-2 w-48 rounded-md shadow-lg py-1 bg-slate-700  ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
+              className="origin-top-right  absolute -right-2 mt-2 w-48 rounded-md shadow-lg py-1 bg-green-500  ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
             >
               {userNavigation.map((item) => (
                 <Menu.Item key={item.name}>

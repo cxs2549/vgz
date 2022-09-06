@@ -21,7 +21,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.018ch;
-  /* color: lighten(black, 20%); */
+  color: lighten(hsl(0, 0%, 0%), 19%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: currentColor;
 }
 
 h1 {
@@ -86,7 +93,7 @@ img {
 }
 
 svg g {
-  fill: #fff
+  fill: #fff;
 }
 
 #bars {
@@ -107,4 +114,22 @@ svg g {
 
 li {
   padding: 0;
+}
+
+a:visited {
+  color: currentColor;
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
 }

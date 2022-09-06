@@ -13,6 +13,15 @@ import MailIcon from "@mui/icons-material/Mail"
 import { FcMenu } from "react-icons/fc"
 import { MdClose } from "react-icons/md"
 import { HamburgerIcon } from "react-hamburger-icon"
+import {
+  TbHome,
+  TbSearch,
+  TbCash,
+  TbMessage,
+  TbSchool,
+  TbSettings,
+  TbLogout,
+} from "react-icons/tb"
 
 type Anchor = "right"
 
@@ -33,47 +42,12 @@ export default function TemporaryDrawer() {
       setState(!state)
     }
 
-  const list = (anchor: Anchor) => (
-    <Box
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-      className="bg-red-300 h-screen"
-    >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  )
-
   return (
     <div className="relative ">
       <React.Fragment>
         <Button
           onClick={toggleDrawer("right", true)}
-          className="overflow-hidden z-50 relative md:hidden -translate-y-1.5 translate-x-2"
+          className="overflow-hidden z-50 relative md:hidden -translate-y-1.5 translate-x-2 "
         >
           <HamburgerIcon open={state} onClick={() => setState(!state)} />
         </Button>
@@ -84,10 +58,10 @@ export default function TemporaryDrawer() {
         >
           <div className="w-[260px] sm:w-[280px]">
             <Box role="presentation" className="dark:bg-slate-700 h-screen">
-              <div className="h-12 flex items-center justify-end px-5 bg-green-500 translate-y-4">
+              <div className="h-20 flex items-center justify-end px-5 bg-green-600">
                 <Button
                   onClick={toggleDrawer("right", true)}
-                  className="overflow-hidden z-50 relative md:hidden  translate-x-2"
+                  className="overflow-hidden z-50 relative md:hidden -right-1.5"
                 >
                   <HamburgerIcon
                     open={state}
@@ -97,17 +71,20 @@ export default function TemporaryDrawer() {
               </div>
               <List className="mt-4">
                 {[
-                  "Home",
-                  "Search",
-                  "Discounts & Promos",
-                  "Feedback",
-                  "University Lessons",
+                  { name: "Home", icon: <TbHome size={28} /> },
+                  { name: "Search", icon: <TbSearch size={28} /> },
+                  { name: "Discounts & Promos", icon: <TbCash size={28} /> },
+                  { name: "Feedback", icon: <TbMessage size={28} /> },
+                  { name: "University Lessons", icon: <TbSchool size={28} /> },
                 ].map((text, index) => (
-                  <ListItem key={text} disablePadding>
+                  <ListItem key={text.name} disablePadding>
                     <ListItemButton>
+                      <ListItemIcon>
+                        {text.icon}
+                      </ListItemIcon>
                       <ListItemText
                         className="dark:text-white"
-                        primary={text}
+                        primary={text.name}
                       />
                     </ListItemButton>
                   </ListItem>
@@ -115,12 +92,16 @@ export default function TemporaryDrawer() {
               </List>
               <Divider />
               <List>
-                {["Settings", "Sign out"].map((text, index) => (
-                  <ListItem key={text} disablePadding>
+                {[
+                  { name: "Settings", icon: <TbSettings size={28} /> },
+                  { name: "Sign out", icon: <TbLogout size={28} /> },
+                ].map((text, index) => (
+                  <ListItem key={text.name} disablePadding>
                     <ListItemButton>
+                      <ListItemIcon>{text.icon}</ListItemIcon>
                       <ListItemText
                         className="dark:text-white"
-                        primary={text}
+                        primary={text.name}
                       />
                     </ListItemButton>
                   </ListItem>

@@ -41,7 +41,7 @@ const Header = () => {
           {loopMe.map((cat) => (
             <Link href={`/categories/${cat.slug}`}>
               <div
-                className={`whitespace-nowrap cursor-pointer rounded-full  font-semibold px-3  py-1 ${
+                className={`whitespace-nowrap cursor-pointer rounded-full  font-semibold px-3 hover:bg-green-500 transition-all duration-500 py-1 ${
                   router.asPath == `/categories/${cat.slug}`
                     ? "bg-green-500 text-brand"
                     : ""
@@ -51,6 +51,8 @@ const Header = () => {
               </div>
             </Link>
           ))}
+          {/* mini menu */}
+          
         </div>
       </Container>
     </header>
