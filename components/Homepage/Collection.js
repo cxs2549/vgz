@@ -21,6 +21,14 @@ const Collection = ({ title, collections }) => {
                 {collection.collection.map((item) => (
                   <div className="snap-start rounded-xl overflow-hidden min-w-[260px] xl:min-w-[210px]">
                     <img src={item.image.url} className="w-full" alt="" />
+                    <div className="bg-slate-300 px-5 py-6 flex-col flex gap-4">
+                      <h3 className="h-[40px]">{item.name}</h3>
+                      <div className="flex gap-2">
+                        <h2 className="line-through">{item.price.formatted_with_symbol}</h2>
+                        <h2 className="font-medium">${item.price.raw - (item.price.raw * 0.25)}</h2>
+                      </div>
+                      <div>Add to cart</div>
+                    </div>
                   </div>
                 ))}
               </div>

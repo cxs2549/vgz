@@ -23,22 +23,31 @@ const Home = ({ products, categories }) => {
   const theHeavies = products.filter(
     (product) => product.categories[0].name === "The Heavies"
   )
-  const promos = products.filter(
+  const summer25 = products.filter(
     (product) =>
-      product.categories[0].name === "Promos" ||
-      product.categories[1]?.name === "Promos"
+      product.categories[0].name === "SUMMER25" ||
+      product.categories[1]?.name === "SUMMER25" ||
+      product.categories[2]?.name === "SUMMER25" ||
+      product.categories[3]?.name === "SUMMER25"
+  )
+  const summer20 = products.filter(
+    (product) =>
+      product.categories[0].name === "SUMMER20" ||
+      product.categories[1]?.name === "SUMMER20" ||
+      product.categories[2]?.name === "SUMMER20" ||
+      product.categories[3]?.name === "SUMMER20"
   )
   const promoCollections = [
-    { title: "Code: SUMMER25 @checkout", collection: promos },
-    { title: "Code: SUMMER20 @checkout", collection: promos },
+    { title: "Code: SUMMER25 @checkout", collection: summer25 },
+    { title: "Code: SUMMER20 @checkout", collection: summer20 },
   ]
   const featuredCollections = [
-    { title: "Best sellers", collection: promos },
-    { title: "Recently Added/Restocked Items", collection: promos },
-    { title: "The Heavies", collection: promos },
-    { title: "Cannabis Hardware", collection: promos },
-    { title: "Ispire", collection: promos },
-    { title: "YLLVAPES", collection: promos },
+    { title: "Best sellers", collection: summer25 },
+    { title: "Recently Added/Restocked Items", collection: summer25 },
+    { title: "The Heavies", collection: summer25 },
+    { title: "Cannabis Hardware", collection: summer25 },
+    { title: "Ispire", collection: summer25 },
+    { title: "YLLVAPES", collection: summer25 },
   ]
   return (
     <>
@@ -48,7 +57,7 @@ const Home = ({ products, categories }) => {
             <HeaviesLogo />
             <MyCarousel products={theHeavies} />
           </div>
-          <div className="flex-1 flex flex-col gap-5">
+          <div className="flex-1 flex flex-col gap-10">
             <Newsletter />
             <Thanks />
           </div>

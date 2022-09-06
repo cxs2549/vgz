@@ -24,7 +24,7 @@ export default function Product({
           <img class="rounded-t-lg object-cover" src={image.url} alt="" />
         </div>
       </Link>
-      <div class="h-[308px] gap-8 px-5 py-12 rounded-lg flex flex-col relative  justify-between ">
+      <div class="h-[308px]  gap-8 px-6 py-12 rounded-lg rounded-t-none flex flex-col relative  justify-between ">
         <div className="flex flex-col">
           <div className="flex gap-2 w-full">
             <h5 class="w-full font-medium tracking-tight text-gray-900 dark:text-white">

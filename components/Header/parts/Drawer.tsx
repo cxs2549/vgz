@@ -22,12 +22,16 @@ import {
   TbSettings,
   TbLogout,
 } from "react-icons/tb"
+import { useSession, signIn, signOut } from "next-auth/react"
 
 type Anchor = "right"
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState(false)
-
+  const { data: session } = useSession()
+  const [signedIn, setSignedIn] = React.useState(
+    session ? "Sign out" : "Sign in"
+  )
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -43,16 +47,16 @@ export default function TemporaryDrawer() {
     }
 
   return (
-    <div className="relative ">
+    <div className="relative -ml-9">
       <React.Fragment>
         <Button
           onClick={toggleDrawer("right", true)}
-          className="overflow-hidden z-50 relative md:hidden -translate-y-1.5 translate-x-2 "
+          className="overflow-hidden z-50 relative lg:hidden -translate-y-1.5 translate-x-2 "
         >
           <HamburgerIcon open={state} onClick={() => setState(!state)} />
         </Button>
         <Drawer
-        id="drawer"
+          id="drawer"
           anchor={"right"}
           open={state}
           onClose={toggleDrawer("right", false)}
@@ -80,9 +84,7 @@ export default function TemporaryDrawer() {
                 ].map((text, index) => (
                   <ListItem key={text.name} disablePadding>
                     <ListItemButton>
-                      <ListItemIcon>
-                        {text.icon}
-                      </ListItemIcon>
+                      <ListItemIcon>{text.icon}</ListItemIcon>
                       <ListItemText
                         className="dark:text-white"
                         primary={text.name}
@@ -93,20 +95,30 @@ export default function TemporaryDrawer() {
               </List>
               <Divider />
               <List>
-                {[
-                  { name: "Settings", icon: <TbSettings size={28} /> },
-                  { name: "Sign out", icon: <TbLogout size={28} /> },
-                ].map((text, index) => (
-                  <ListItem key={text.name} disablePadding>
-                    <ListItemButton>
-                      <ListItemIcon>{text.icon}</ListItemIcon>
-                      <ListItemText
-                        className="dark:text-white"
-                        primary={text.name}
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                ))}
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <TbSettings size={28} />
+                    </ListItemIcon>
+                    <ListItemText
+                      className="dark:text-white"
+                      primary="Settings"
+                    />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton
+                    onClick={() => (session ? signOut() : signIn())}
+                  >
+                    <ListItemIcon>
+                      <TbLogout size={28} />
+                    </ListItemIcon>
+                    <ListItemText
+                      className="dark:text-white"
+                      primary={signedIn}
+                    />
+                  </ListItemButton>
+                </ListItem>
               </List>
             </Box>
           </div>

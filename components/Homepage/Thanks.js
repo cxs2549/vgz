@@ -9,10 +9,10 @@ import {
 const Thanks = () => {
   return (
     <div className="flex flex-col w-full max-w-lg mx-auto xl:mx-0 xl:ml-auto">
-      <h2 className=" text-2xl  text-center font-bold  mx-auto lg:text-4xl  opacity-90">
+      <h2 className=" text-3xl  text-center font-bold  mx-auto lg:text-4xl  opacity-90 w-full ml-auto xl:text-right">
         Thanks for checking us out!
       </h2>
-      <div className="xl:-mt-4 xs:grid grid-cols-[.1fr,1fr] sm:grid-cols-[.1fr,1fr] justify-center items-center xl:gap-5">
+      <div className="sm:-mt-4 xs:grid grid-cols-[.1fr,1fr] sm:grid-cols-[.1fr,1fr] justify-center items-center xl:gap-5">
         <div className=" text-4xl xl:text-5xl flex xs:flex-col items-center justify-center gap-5 dark:text-white py-8 relative">
           <TbBrandInstagram />
           <TbBrandMeta />

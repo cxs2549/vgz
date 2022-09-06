@@ -16,6 +16,7 @@
     "daisyui": "^2.24.0",
     "framer-motion": "^7.2.1",
     "next": "latest",
+    "next-auth": "^4.10.3",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-floating-button": "^1.1.1",

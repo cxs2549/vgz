@@ -11,15 +11,15 @@ const Newsletter = () => {
       </p>
       <div className="mt-10 w-full max-w-sm mx-auto lg:max-w-md md:ml-auto xl:mr-0">
         <div className="relative w-full ml-auto flex justify-center flex-col">
-          <h2 className="absolute left-0 -top-4 translate-x-1 opacity-80">
+          <h2 className="absolute left-0 -top-5 translate-x-1 opacity-80">
             Sign up for our newsletter today.
           </h2>
           <input
             type="email"
             placeholder="Email"
-            className="mt-2 px-4 h-[50px]  w-full focus:ring-0 border-none !outline-none"
+            className="py-4 pl-4 mr-4 w-full focus:outline-none border rounded-l-lg bg-white"
           />
-          <button className=" w-full flex justify-center items-center  whitespace-nowrap  font-semibold h-[50px]">
+          <button className=" max-w-min w-full flex justify-center items-center absolute right-4  whitespace-nowrap dark:text-slate-600 font-semibold h-[50px]">
             Notify me &rarr;
           </button>
         </div>
