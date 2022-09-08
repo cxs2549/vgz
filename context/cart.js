@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     getCart();
-  }, []);
+  }, [state]);
 
   const setCart = (payload) => dispatch({ type: SET_CART, payload });
 
