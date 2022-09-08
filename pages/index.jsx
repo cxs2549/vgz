@@ -6,6 +6,7 @@ import commerce from "../lib/commerce"
 
 import Thanks from "../components/Homepage/Thanks"
 import Collections from "../components/Homepage/Collection"
+import CollectionSlides from "../components/Homepage/CollectionSlides"
 
 export async function getStaticProps() {
   const { data: categories } = await commerce.categories.list()
@@ -40,6 +41,7 @@ const Home = ({ products, categories }) => {
   const promoCollections = [
     { title: "Code: SUMMER25 @checkout", collection: summer25 },
     { title: "Code: SUMMER20 @checkout", collection: summer20 },
+    
   ]
   const featuredCollections = [
     { title: "Best sellers", collection: summer25 },
@@ -60,12 +62,12 @@ const Home = ({ products, categories }) => {
           <div className="flex-1 flex flex-col gap-10">
             <Newsletter />
             <Thanks />
+          <CollectionSlides collections={promoCollections} title="Promos" />
           </div>
         </div>
       </Container>
       <Container classes={`px-0`}>
         <div className="flex flex-col gap-5">
-          <Collections collections={promoCollections} title="Promos" />
           <Collections collections={featuredCollections} title="Featured" />
         </div>
       </Container>

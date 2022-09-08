@@ -47,11 +47,11 @@ export default function TemporaryDrawer() {
     }
 
   return (
-    <div className="relative -ml-9 xl:hidden">
+    <div className="relative -ml-9">
       <React.Fragment>
         <Button
           onClick={toggleDrawer("right", true)}
-          className="overflow-hidden z-50 relative  -translate-y-[5px] translate-x-2 "
+          className="overflow-hidden z-50 relative  translate-x-2 "
         >
           <HamburgerIcon open={state} onClick={() => setState(!state)} />
         </Button>
@@ -95,17 +95,7 @@ export default function TemporaryDrawer() {
               </List>
               <Divider />
               <List>
-                <ListItem disablePadding>
-                  <ListItemButton>
-                    <ListItemIcon>
-                      <TbSettings size={28} />
-                    </ListItemIcon>
-                    <ListItemText
-                      className="dark:text-white"
-                      primary="Settings"
-                    />
-                  </ListItemButton>
-                </ListItem>
+                
                 <ListItem disablePadding>
                   <ListItemButton
                     onClick={() => (session ? signOut() : signIn())}

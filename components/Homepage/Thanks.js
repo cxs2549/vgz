@@ -8,20 +8,22 @@ import {
 
 const Thanks = () => {
   return (
-    <div className="flex flex-col w-full max-w-lg mx-auto xl:mx-0 xl:ml-auto">
-      <h2 className=" text-3xl  text-center font-bold  mx-auto lg:text-4xl  opacity-90 w-full ml-auto xl:text-right xl:mb-4">
+    <div className=" flex flex-col w-full  mx-auto xl:mx-0 xl:ml-auto ">
+      <h2 className=" text-3xl  text-center font-bold  mx-auto lg:text-4xl  opacity-90 w-full  xl:mb-4">
         Thanks for checking us out!
       </h2>
-      <div className="sm:-mt-4 sm:grid grid-cols-[.1fr,1fr] sm:grid-cols-[.1fr,1fr] justify-center items-center xl:gap-5">
-        <div className=" text-4xl xl:text-5xl flex sm:flex-col items-center justify-center gap-5 dark:text-white py-8 relative">
+
+      <div>
+        <div className=" text-4xl  flex items-center justify-center gap-5 dark:text-white pt-4 relative">
+        <h3 className="text-sm">Connect w/us!</h3>
           <TbBrandInstagram />
           <TbBrandMeta />
           <TbBrandFacebook />
           <TbBrandTiktok />
           <TbBrandTwitter />
-          <div className="absolute text-xs top-3 xs:hidden">We float on</div>
         </div>
-        <div className="  p-2">
+      </div>
+      {/* <div className="  p-2">
           <p>
             We are a small family-owned business specializing in high-quality
             vaporizers & accessories by the finest artists and manufacturers
@@ -43,8 +45,7 @@ const Thanks = () => {
             with any questions. We'd be happy to discuss your needs! Thanks for
             visiting our store!
           </p>
-        </div>
-      </div>
+        </div> */}
     </div>
   )
 }

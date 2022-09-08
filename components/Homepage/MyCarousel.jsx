@@ -9,9 +9,9 @@ const MyCarousel = ({ products }) => {
       // infiniteLoop
       showIndicators={false}
       showStatus={false}
-      showThumbs={false}
+      // showThumbs={true}
       showArrows={false}
-      className="max-w-sm md:max-w-md"
+      className="max-w-md lg:max-w-xl "
     >
       {products.map((item, i) => (
         <Link href={`/products/${item.permalink}`}>

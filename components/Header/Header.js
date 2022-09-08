@@ -5,7 +5,7 @@ import { useRouter } from "next/router"
 
 const Container = ({ children, classes }) => (
   <div
-    className={`max-w-6xl mx-auto flex items-center justify-between xl:px-0 ${classes}`}
+    className={`max-w-7xl mx-auto flex items-center justify-between xl:px-0 ${classes}`}
   >
     {children}
   </div>

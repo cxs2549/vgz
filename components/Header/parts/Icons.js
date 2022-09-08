@@ -5,6 +5,7 @@ import { Fragment } from "react"
 import Link from "next/link"
 import { useCartState } from "../../../context/cart"
 import Drawer from "./Drawer.tsx"
+import DrawerSignedOut from "./DrawerSignedOut.tsx"
 import { useSession, signIn, signOut } from "next-auth/react"
 
 const Icons = () => {
@@ -45,20 +46,17 @@ const Icons = () => {
     )
   }
   return (
-    <div className="flex items-center">
-      {!session && (
-        <div onClick={() => signIn()} className="hidden lg:block">
-          <button className="font-medium">Sign in</button>
-        </div>
-      )}
-      <Drawer />
+    <div className="flex items-center  gap-6">
+      <div onClick={() => signIn()} className="hidden lg:block">
+        <button className="font-medium">Sign in</button>
+      </div>
+
+      <DrawerSignedOut />
     </div>
   )
 }
 
 const ProfileDropdown = ({ session }) => {
-
-
   return (
     <Menu as="div" className="relative  z-50 hidden lg:block">
       {({ open }) => (

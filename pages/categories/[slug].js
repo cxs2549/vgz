@@ -22,6 +22,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const { data: categories } = await commerce.categories.list()
+ 
 
   return {
     paths: categories.map((category) => ({
@@ -29,6 +30,7 @@ export async function getStaticPaths() {
         slug: category.slug,
       },
     })),
+   
     fallback: false,
   }
 }
