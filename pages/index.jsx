@@ -66,9 +66,9 @@ const Home = ({ products, categories }) => {
           </div>
         </div>
       </Container>
-      <Container classes={`px-0`}>
+      <Container classes={``}>
         <div className="flex flex-col gap-5">
-          <Collections collections={featuredCollections} title="Featured" />
+          <CollectionSlides collections={featuredCollections} title="Featured" />
         </div>
       </Container>
     </>

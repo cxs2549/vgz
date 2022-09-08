@@ -16,7 +16,7 @@ const Card = ({ image, permalink }) => (
 
 const Collection = ({ title, collections }) => {
   return (
-    <div className="bg-slate-200 dark:bg-[#1F2937] rounded-3xl  p-5   pt-5 shadow ">
+    <div className="bg-slate-100 dark:bg-[#1F2937] rounded-3xl  p-5  shadow ">
       <Title>{title}</Title>
       <div className="flex  w-full  ">
         <div className="flex flex-col">

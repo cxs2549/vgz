@@ -9,13 +9,12 @@ import {
 const Thanks = () => {
   return (
     <div className=" flex flex-col w-full  mx-auto xl:mx-0 xl:ml-auto ">
-      <h2 className=" text-3xl  text-center font-bold  mx-auto lg:text-4xl  opacity-90 w-full  xl:mb-4">
-        Thanks for checking us out!
-      </h2>
-
       <div>
-        <div className=" text-4xl  flex items-center justify-center gap-5 dark:text-white pt-4 relative">
-        <h3 className="text-sm">Connect w/us!</h3>
+        <h2 className=" text-3xl  text-center font-bold  mx-auto lg:text-4xl  opacity-90 w-full  xl:mb-4">
+          Thanks for checking us out!
+        </h2>
+        <div className=" text-7xl  flex items-center justify-center gap-6 dark:text-white pt-4 relative">
+          <h3 className="text-sm">Connect w/us!</h3>
           <TbBrandInstagram />
           <TbBrandMeta />
           <TbBrandFacebook />
