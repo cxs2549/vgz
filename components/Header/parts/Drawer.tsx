@@ -47,11 +47,11 @@ export default function TemporaryDrawer() {
     }
 
   return (
-    <div className="relative -ml-9">
+    <div className="relative -ml-9 lg:hidden">
       <React.Fragment>
         <Button
           onClick={toggleDrawer("right", true)}
-          className="overflow-hidden z-50 relative lg:hidden -translate-y-1.5 translate-x-2 "
+          className="overflow-hidden z-50 relative  -translate-y-1.5 translate-x-2 "
         >
           <HamburgerIcon open={state} onClick={() => setState(!state)} />
         </Button>
@@ -66,7 +66,7 @@ export default function TemporaryDrawer() {
               <div className="h-20 flex items-center justify-end px-5 bg-green-600">
                 <Button
                   onClick={toggleDrawer("right", true)}
-                  className="overflow-hidden z-50 relative md:hidden -right-1.5"
+                  className="overflow-hidden z-50 relative -right-1.5"
                 >
                   <HamburgerIcon
                     open={state}

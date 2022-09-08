@@ -44,13 +44,13 @@ export default function ProductPage({ product }) {
       <div className="bg-white max-w-lg rounded-xl overflow-hidden">
         <img src={product.image.url} className="rounded-xl" alt="" />
       </div>
-      <div className=" flex flex-col justify-between w-full">
+      <div className=" flex flex-col justify-between w-full pb-24">
         <div className="gap-8 flex flex-col w-full pr-2 ">
-          <div className="flex flex-col lg:flex-row justify-between gap-4 items-start lg:items-center -z-10">
-            <h5 className="text-2xl font-medium dark:text-white">
+          <div className="flex flex-col justify-between gap-3 items-start -z-10">
+            <h4 className="text-3xl dark:text-white">
               {product.name}
-            </h5>
-            <div className="flex-shrink-0 self-start">
+            </h4>
+            <div className="flex-shrink-0">
               <Ratings reviews={product.created.toString().slice(-2)} />
             </div>
           </div>
@@ -59,12 +59,12 @@ export default function ProductPage({ product }) {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <h2 className="font-bold text-2xl dark:text-white">
+          <h2 className="font-bold text-xl dark:text-white">
             {product.price.formatted_with_symbol}
           </h2>
           <button
               onClick={addToCart}
-              class=" items-center py-2 px-3 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-32 flex justify-center"
+              class=" items-center py-2 px-3 text-sm font-medium text-center  rounded-lg  transition-colors duration-300 focus:ring-4 focus:outline-none focus:ring-green-300  dark:hover:bg-green-700 dark:focus:ring-green-300 w-32 flex justify-center"
             >
               Add to Cart
               <svg

@@ -52,8 +52,8 @@ const Home = ({ products, categories }) => {
   return (
     <>
       <Container>
-        <div className="flex gap-5 flex-col lg:flex-row">
-          <div className="flex-1 flex flex-col items-center gap-5">
+        <div className="flex gap-5 flex-col  lg:flex-row justify-center w-full">
+          <div className="flex-1 mr-auto w-full flex flex-col items-center xl:items-start xl:justify-start gap-5">
             <HeaviesLogo />
             <MyCarousel products={theHeavies} />
           </div>
@@ -63,7 +63,7 @@ const Home = ({ products, categories }) => {
           </div>
         </div>
       </Container>
-      <Container>
+      <Container classes={`px-0`}>
         <div className="flex flex-col gap-5">
           <Collections collections={promoCollections} title="Promos" />
           <Collections collections={featuredCollections} title="Featured" />

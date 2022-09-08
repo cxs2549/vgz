@@ -18,32 +18,32 @@ export default function Product({
       .then(({ cart }) => setCart(cart))
       .catch((err) => console.log(err))
   return (
-    <div class="sm:max-w-sm rounded-lg  border-gray-100 shadow-md dark:bg-gray-800 border-t  dark:border-gray-700">
+    <div class="sm:max-w-sm rounded-2xl  border-gray-100 shadow-md dark:bg-gray-800 border-t  dark:border-gray-700">
       <Link href={`/products/${permalink}`}>
         <div>
-          <img class="rounded-t-lg object-cover" src={image.url} alt="" />
+          <img class="rounded-t-2xl object-cover" src={image.url} alt="" />
         </div>
       </Link>
-      <div class="h-[308px]  gap-8 px-6 py-12 rounded-lg rounded-t-none flex flex-col relative  justify-between ">
+      <div class="gap-12 px-6 py-8 rounded-lg rounded-t-none flex flex-col relative  justify-between ">
         <div className="flex flex-col">
           <div className="flex gap-2 w-full">
-            <h5 class="w-full font-medium tracking-tight text-gray-900 dark:text-white">
+            <h4 class="w-full h-[60px] tracking-tight text-gray-900 font-[500] dark:text-white">
               {name}
-            </h5>
+            </h4>
           </div>
         </div>
-        <p className="font-bold">{price.formatted_with_symbol}</p>
 
         <div className="flex flex-col justify-between w-full">
+          <p className="font-semibold">{price.formatted_with_symbol}</p>
           <div className="flex items-center justify-between w-full">
             <Link href={`/products/${permalink}`}>
-              <button className="text-xs font-medium tracking-wider">
+              <button className="text-xs hover:scale-105 transition-transform duration-300 font-medium tracking-wider py-2 ">
                 DETAILS
               </button>
             </Link>
             <button
               onClick={addToCart}
-              class="items-center py-2 px-3 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-green-500 dark:focus:ring-green-800 w-32 flex justify-center"
+              class="items-center py-2 px-3 text-sm font-medium text-center  rounded-lg hover:bg-green-500 dark:hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300  dark:focus:ring-green-800 w-32 hidden sm:flex justify-center transition-colors duration-300"
             >
               Add to Cart
               <svg

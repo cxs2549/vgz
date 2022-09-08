@@ -13,10 +13,10 @@ const Icons = () => {
 
   if (session) {
     return (
-      <div className="flex gap-8 text-3xl items-center relative z-50">
+      <div className="flex gap-8 text-2xl items-center relative z-50">
         <div className="hidden md:block  relative">
           <TbSearch className="text-green-600" />
-          <div className="absolute w-[300px] lg:w-[350px] -right-3 -top-2 -z-10">
+          <div className="absolute w-[300px] lg:w-[350px] -right-3 -top-2.5 -z-10">
             <input
               type="text"
               className="w-full shadow !outline-none text-slate-500 px-4 py-3 text-base"
@@ -60,7 +60,7 @@ const ProfileDropdown = ({ session }) => {
 
 
   return (
-    <Menu as="div" className="relative ml-7 z-50 hidden lg:block">
+    <Menu as="div" className="relative  z-50 hidden lg:block">
       {({ open }) => (
         <>
           <div>

@@ -27,11 +27,11 @@ const Header = () => {
         <Logo />
         <Icons />
       </Container>
-      <Container classes={` h-12`}>
-        <div className="flex px-5 xl:px-0 gap-8 pb-4 overflow-x-scroll no-scrollbar">
+      <Container classes={` h-10`}>
+        <div className="flex px-5 xl:px-0 gap-6 pb-4 overflow-x-scroll no-scrollbar">
           <Link href={`/`}>
             <div
-              className={`whitespace-nowrap cursor-pointer rounded-full  font-semibold px-3  py-1 ${
+              className={`whitespace-nowrap cursor-pointer rounded-full  font-medium text-base px-3  py-1 ${
                 router.asPath == `/` ? "bg-green-500 text-brand" : ""
               }`}
             >
@@ -41,7 +41,7 @@ const Header = () => {
           {loopMe.map((cat) => (
             <Link href={`/categories/${cat.slug}`}>
               <div
-                className={`whitespace-nowrap cursor-pointer rounded-full  font-semibold px-3 hover:bg-green-500 transition-all duration-500 py-1 ${
+                className={`whitespace-nowrap cursor-pointer rounded-full  font-medium text-base px-3 hover:bg-green-500 transition-all duration-500 py-1 ${
                   router.asPath == `/categories/${cat.slug}`
                     ? "bg-green-500 text-brand"
                     : ""
